@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  year: 
+  rated: MyString
+  awards: MyString
+  metascore: 
+  imdbrating: 
+
+two:
+  title: MyString
+  year: 
+  rated: MyString
+  awards: MyString
+  metascore: 
+  imdbrating: 

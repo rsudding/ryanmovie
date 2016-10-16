@@ -1,0 +1,31 @@
+<h1>Info#infoyear</h1>
+<p>Find me in app/views/info/infoyear.html.erb</p>
+<h3>titles <%= @responsetitleyear %> </h3>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Year</th>
+<th>Rated</th>
+<th>Awards</th>
+<th>Metascore</th>
+<th>IMDB Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<% @responsetitleyear.first do |result| %>
+<td><%= result["Title"] %></td>
+<td><%= result["Year"] %></td>
+<td><%= result["Rated"] %></td>
+<td><%= result["Awards"] %></td>
+<td><%= result["Metascore"] %></td>
+<td><%= result["imdbRating"] %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+<br>
+<br>
+<%= link_to 'Home', root_path %>
+

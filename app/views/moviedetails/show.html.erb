@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @moviedetail.title %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @moviedetail.year %>
+</p>
+
+<p>
+  <strong>Rated:</strong>
+  <%= @moviedetail.rated %>
+</p>
+
+<p>
+  <strong>Awards:</strong>
+  <%= @moviedetail.awards %>
+</p>
+
+<p>
+  <strong>Metascore:</strong>
+  <%= @moviedetail.metascore %>
+</p>
+
+<p>
+  <strong>Imdbrating:</strong>
+  <%= @moviedetail.imdbrating %>
+</p>
+
+<%= link_to 'Edit', edit_moviedetail_path(@moviedetail) %> |
+<%= link_to 'Back', moviedetails_path %>

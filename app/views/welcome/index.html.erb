@@ -1,0 +1,14 @@
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+<%= form_tag("searchtitle ", method: "post") do %>
+<%= label_tag(:search_title, "Search for Title:") %>
+<%= text_field_tag(:search_title) %>
+<%= submit_tag("Search for Title") %>
+<% end %>
+
+<%= form_tag("searchyear", method: "post") do %>
+<%= label_tag(:search_year, "Search for Title:") %>
+<%= text_field_tag(:search_title) %>
+<%= text_field_tag(:search_year) %>
+<%= submit_tag("Search for Title and Year") %>
+<% end %>
