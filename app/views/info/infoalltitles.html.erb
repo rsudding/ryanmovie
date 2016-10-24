@@ -1,0 +1,34 @@
+<h1>Info#infoalltitles</h1>
+<p>Find me in app/views/info/infoalltitles.html.erb</p>
+<h3>Titles <%= @responsealltitles %> </h3>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Year</th>
+<th>imdbID</th>
+
+<% puts @responsealltitles%>
+</tr>
+</thead>
+<tbody>
+<tr>
+
+<% @responsealltitles["Search"].each do |result| %>
+<td><%= result["Title"] %> <%= submit_tag("Search for Title") %></td> 
+<td><%= result["Year"] %></td>
+<td><%= result["imdbID"] %></td>
+
+<%= form_tag("searchtitle ", method: "post") do %>
+<%= label_tag(:search_title, "Search for Rating:") %>
+
+<% end %>
+
+
+</tr>
+<% end %>
+</tbody>
+</table>
+<br>
+<br>
+<%= link_to 'Home', root_path %>

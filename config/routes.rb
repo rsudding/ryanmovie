@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'info/infometascore'
 
   get 'info/infoimdbrating'
+  
+  get 'info/infoalltitles'
 
   get 'welcome/index'
 
@@ -24,6 +26,9 @@ match 'searchtitle', to: 'info#infotitle', via: [:get, :post]
 
 match 'searchyear', to: 'info#infoyear', via: [:get, :post]
 
+match 'findalltitles', to: 'info#infoalltitles', via:[:get, :post]
+
+match 'findhighestrating', to: 'info#infohighestrating', via:[:get, :post]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

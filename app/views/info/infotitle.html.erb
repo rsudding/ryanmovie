@@ -1,6 +1,6 @@
 <h1>Info#infotitle</h1>
 <p>Find me in app/views/info/infotitle.html.erb</p>
-<h3>titles <%= @responsetitle %> </h3>
+<h3>Titles <%= @responsetitle %> </h3>
 <table>
 <thead>
 <tr>
@@ -10,21 +10,24 @@
 <th>Awards</th>
 <th>Metascore</th>
 <th>IMDB Rating</th>
+<th>Tomatoes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<% @responsetitle.first do |result| %>
-<td><%= result["Title"] %></td>
-<td><%= result["Year"] %></td>
-<td><%= result["Rated"] %></td>
-<td><%= result["Awards"] %></td>
-<td><%= result["Metascore"] %></td>
-<td><%= result["imdbRating"] %></td>
+
+<td><%= @responsetitle["Title"] %></td>
+<td><%= @responsetitle["Year"] %></td>
+<td><%= @responsetitle["Rated"] %></td>
+<td><%= @responsetitle["Awards"] %></td>
+<td><%= @responsetitle["Metascore"] %></td>
+<td><%= @responsetitle["imdbRating"] %></td>
+<td><%= @responsetitle["tomatoRating"] %></td>
 </tr>
-<% end %>
+
 </tbody>
 </table>
 <br>
 <br>
 <%= link_to 'Home', root_path %>
+

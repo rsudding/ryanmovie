@@ -1,0 +1,28 @@
+<h1>Info#infohighestrating</h1>
+<p>Find me in app/views/info/infohighestrating.html.erb</p>
+<h3>Titles <%= @moviedetail %> </h3>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Year</th>
+<th>Rated</th>
+<th>Awards</th>
+<th>Metascore</th>
+<th>IMDB Rating</th>
+<th>Tomatoes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+
+<td><%= @responsetitle["Title"] %></td>
+<td><%= @responsetitle["Year"] %></td>
+
+</tr>
+
+</tbody>
+</table>
+<br>
+<br>
+<%= link_to 'Home', root_path %>

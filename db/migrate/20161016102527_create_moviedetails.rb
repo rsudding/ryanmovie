@@ -7,6 +7,7 @@ class CreateMoviedetails < ActiveRecord::Migration
       t.string :awards
       t.integer :metascore
       t.integer :imdbrating
+      t.integer :tomatorating
 
       t.timestamps null: false
     end
