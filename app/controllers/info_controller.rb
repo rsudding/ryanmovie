@@ -29,6 +29,13 @@ class InfoController < ApplicationController
     if params[:search_title].to_s.present? 
       @title= params[:search_title]
       @responsealltitles = RubyMovie.findAllTitles(@title)
+      
+      title = @responsealltitles["title"]
+      @moviedetail = Moviedetail.find_by(:title => title)
+      if @moviedetail.blank?
+        @moviedetail = Moviedetail.create(:title=>@responsealltitles["Title"],
+        :year=>@responsealltitles["Year"],:imdbdrating=>@responsealltitles["imdbID"])
+      end
     else
       redirect_to(root_url)
     end
@@ -50,6 +57,8 @@ class InfoController < ApplicationController
   end
 
   def inforated
+    @select = @responsealltitles["Search"].each
+    @findrating = RubyMovie.searchByTitle()
   end
 
   def infoawards

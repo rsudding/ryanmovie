@@ -29,6 +29,9 @@ match 'searchyear', to: 'info#infoyear', via: [:get, :post]
 match 'findalltitles', to: 'info#infoalltitles', via:[:get, :post]
 
 match 'findhighestrating', to: 'info#infohighestrating', via:[:get, :post]
+
+match 'findrating', to: 'info#infotitle', via: [:get, :post]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

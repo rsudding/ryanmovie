@@ -15,12 +15,13 @@
 <tr>
 
 <% @responsealltitles["Search"].each do |result| %>
-<td><%= result["Title"] %> <%= submit_tag("Search for Title") %></td> 
+<td><%= result["Title"] %> </td>
 <td><%= result["Year"] %></td>
 <td><%= result["imdbID"] %></td>
+<td><%= submit_tag("Search for Rating") %> 
+<%= label_tag(:findrating, "Show Move Rating") %>
+<%= form_tag("findrating ", method: "post") do %></td>
 
-<%= form_tag("searchtitle ", method: "post") do %>
-<%= label_tag(:search_title, "Search for Rating:") %>
 
 <% end %>
 
